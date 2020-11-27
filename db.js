@@ -9,10 +9,12 @@ const connectionDB = async () => {
     });
 
     console.log("Mongoose DB is connected");
+   
   }
   catch(err){
     throw new Error(err)
   }
 }
+mongoose.set("useCreateIndex", true);
 
 module.exports = connectionDB;
